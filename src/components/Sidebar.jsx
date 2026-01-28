@@ -13,7 +13,7 @@ export const Sidebar = () => {
 
   const menuItems = [
     { icon: LayoutDashboard, label: "Dashboard", path: "/" },
-    // ❌ Lidlar (CRM) olib tashlandi
+
     { icon: Users, label: "O'quvchilar", path: "/students" },
     { icon: Layers, label: "Guruhlar", path: "/groups" },
     { icon: CalendarCheck, label: "Davomat", path: "/attendance" },
@@ -24,17 +24,17 @@ export const Sidebar = () => {
 
   return (
     <>
-      {/* Placeholder (Joy saqlash uchun) */}
+
       <div className="w-20 h-screen bg-transparent shrink-0 hidden md:block transition-all duration-300" />
 
-      {/* Fixed Sidebar */}
+
       <div 
         className={`fixed top-0 left-0 h-screen bg-white dark:bg-slate-800 border-r border-milk-200 dark:border-slate-700 flex flex-col justify-between transition-all duration-300 z-50 shadow-2xl ${isHovered ? 'w-72' : 'w-20'}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         
-        {/* LOGO */}
+
         <div className="p-5 flex items-center gap-4 overflow-hidden whitespace-nowrap h-20">
           <div className="w-10 h-10 min-w-[2.5rem] bg-brand-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/30">
             E
@@ -45,7 +45,6 @@ export const Sidebar = () => {
           </div>
         </div>
 
-        {/* MENYU */}
         <nav className="flex-1 px-3 space-y-2 overflow-x-hidden py-4 custom-scrollbar hover:overflow-y-auto">
           {menuItems.map((item) => {
             const isActive = location.pathname === item.path;
@@ -72,7 +71,7 @@ export const Sidebar = () => {
           })}
         </nav>
 
-        {/* USER INFO */}
+
         <div className="p-4 border-t border-milk-100 dark:border-slate-700 overflow-hidden whitespace-nowrap bg-white dark:bg-slate-800">
           {isHovered && (
             <div className="flex items-center gap-3 mb-4 p-3 bg-milk-50 dark:bg-slate-700/50 rounded-xl animate-in fade-in slide-in-from-bottom-2">
